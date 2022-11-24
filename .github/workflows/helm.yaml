@@ -18,7 +18,6 @@ jobs:
     if: |
       (github.repository == 'jesper7/helm-charts')
     outputs:
-      docs: ${{ steps.filter.outputs.docs }}
       charts: ${{ steps.filter.outputs.charts }}
 
     steps:
@@ -31,8 +30,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           filters: |
             charts:
-              - 'studio/Chart.yaml'
-              - 'studio/values.yaml'
+              - 'charts/studio/Chart.yaml'
+              - 'charts/studio/values.yaml'
 
   release:
     name: Release chart
