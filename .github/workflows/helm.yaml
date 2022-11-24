@@ -9,11 +9,11 @@ permissions:
   contents: read
 
 jobs:
-
+  name: Check for updated charts
   changes:
     permissions:
-      contents: read  # for dorny/paths-filter to fetch a list of changed files
-      pull-requests: read  # for dorny/paths-filter to read pull requests
+      contents: read
+      pull-requests: read
     runs-on: ubuntu-latest
     if: |
       (github.repository == 'jesper7/helm-charts')
@@ -35,11 +35,11 @@ jobs:
               - 'studio/values.yaml'
 
   chart:
-    name: Release Chart
+    name: Release chart
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write # needed to write releases
+      contents: write 
 
     needs:
       - changes
