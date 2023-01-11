@@ -1,6 +1,6 @@
 apiVersion: v2
 name: studio
-description: A Helm chart for Kubernetesss
+description: A Helm chart for Kubernetesssasdf
 
 # A chart can be either an 'application' or a 'library' chart.
 #
